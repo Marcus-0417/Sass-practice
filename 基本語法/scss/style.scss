@@ -1,0 +1,52 @@
+/* 導覽列 */
+a {
+    display: block;
+    color: #222;
+    text-decoration: none;
+
+
+    .icon & {
+        margin-right: 10px;
+        width: 35px;
+        height: 35px;
+        transition: 0.4s;
+    }
+
+    .menu & {
+        margin: 10px;
+        padding: 7px 0 5px;
+        border-bottom: solid 2px transparent;
+        transition: 0.4s;
+        text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+
+        &:hover {
+            border-bottom: solid 2px #666;
+            color: black;
+        }
+    }
+}
+
+nav {
+    display: flex; //主軸方向：水平
+    flex-direction: column; //主軸方向：垂直
+    align-items: flex-end; //副軸水平靠右
+
+    ul {
+        list-style: none;
+        display: flex;
+
+    }
+}
+
+.box {
+    background: {
+        size: 100%;
+        color: #000;
+        repeat:no-repeat;
+    }
+    font: {
+        size: 1.2rem;
+        weight: bold;
+        family: "微軟正黑體";
+    }
+}
