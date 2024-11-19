@@ -1,26 +1,35 @@
 @charset "UTF-8";
+/* 變數 */
+/* 前綴詞 */
+/* 字級 */
+/* 顏色 */
+/* 間距 */
+/* 速度 */
+/* RWD斷點 */
 /* 導覽列 */
 a {
   display: block;
-  color: #222;
+  color: #333;
   text-decoration: none;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
-.icon a {
-  margin-right: 10px;
+.nav-icon a {
+  margin-right: 8px;
   width: 35px;
   height: 35px;
   transition: 0.4s;
 }
-.menu a {
+.nav-menu a {
   margin: 10px;
   padding: 7px 0 5px;
   border-bottom: solid 2px transparent;
   transition: 0.4s;
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
 }
-.menu a:hover {
-  border-bottom: solid 2px #666;
-  color: black;
+.nav-menu a:hover {
+  border-bottom: solid 2px #777;
+  color: #222;
 }
 
 nav {
@@ -35,9 +44,20 @@ nav ul {
 
 .box {
   background-size: 100%;
-  background-color: #000;
+  background-color: #222;
   background-repeat: no-repeat;
   font-size: 1.2rem;
   font-weight: bold;
-  font-family: "微軟正黑體";
+  font-family: "sans-serif";
+  line-height: 1.8rem;
+}
+
+/* 手機版 */
+@media (max-width: 640px) {
+  #restaurant {
+    flex-direction: column;
+  }
+  #restaurant figure {
+    margin: 16px 0;
+  }
 }/*# sourceMappingURL=style.css.map */

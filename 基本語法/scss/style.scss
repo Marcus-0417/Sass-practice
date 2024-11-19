@@ -1,27 +1,86 @@
+/* 變數 */
+
+/* 前綴詞 */
+$navbar-prefix: nav;
+$button-prefix: btn;
+
+/* 字級 */
+
+$font-size: ( /* map-get($font-size , s ) */
+    xs: 0.8rem,
+    s: 1rem,
+    m: 1.2rem,
+    l: 1.4rem,
+    xl: 1.6rem,
+    xxl: 1.8rem,
+    xxxl: 2rem,
+);
+// $font-size-xs: 0.8rem;
+// $font-size-s: 1rem;
+// $font-size-m: 1.2rem;
+// $font-size-l: 1.4rem;
+// $font-size-xl: 1.6rem;
+// $font-size-xxl: 1.8rem;
+// $font-size-xxxl: 2rem;
+
+/* 顏色 */
+$color-primary: #f00;
+$color-secondary: #0f0;
+$color-tertiary: #00f;
+$color-alpha-b85: rgba(0, 0, 0, 0.85);
+$color-alpha-b65: rgba(0, 0, 0, 0.65);
+$color-black: #222;
+$color-deep: #333;
+$color-grey: #777;
+
+/* 間距 */
+$interval-xs: 2px;
+$interval-s: 4px;
+$interval-m: 8px;
+$interval-l: 16px;
+$interval-xl: 24px;
+$interval-xxl: 32px;
+$interval-xxxl: 80px;
+
+$interval-x-lg: 0 16px;
+$interval-y-lg: 16px 0;
+$interval-xy-lg: 10px 20px;
+
+/* 速度 */
+$speed-fast: 0.4s;
+$speed-slow: 1s;
+
+/* RWD斷點 */
+$media-sm: "max-width: 640px";
+$media-md: "max-width: 1023px";
+$media-lg: "min-width: 1024px";
+
 /* 導覽列 */
 a {
     display: block;
-    color: #222;
+    color: $color-deep;
     text-decoration: none;
+    font-size: map-get($font-size , s);
+    line-height: map-get($font-size , s) * 1.5;
 
 
-    .icon & {
-        margin-right: 10px;
+    .#{$navbar-prefix}-icon & {
+        margin-right: $interval-m;
         width: 35px;
         height: 35px;
-        transition: 0.4s;
+        transition: $speed-fast;
     }
 
-    .menu & {
+    .#{$navbar-prefix}-menu & {
         margin: 10px;
         padding: 7px 0 5px;
         border-bottom: solid 2px transparent;
-        transition: 0.4s;
+        transition: $speed-fast;
         text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
 
         &:hover {
-            border-bottom: solid 2px #666;
-            color: black;
+            border-bottom: solid 2px $color-grey;
+            color: $color-black;
         }
     }
 }
@@ -41,12 +100,26 @@ nav {
 .box {
     background: {
         size: 100%;
-        color: #000;
-        repeat:no-repeat;
+        color: $color-black;
+        repeat: no-repeat;
     }
+
     font: {
-        size: 1.2rem;
+        size: map-get($font-size , m);
         weight: bold;
-        family: "微軟正黑體";
+        family: "sans-serif";
+    }
+
+    line-height: map-get($font-size , m) * 1.5;
+}
+
+/* 手機版 */
+@media ($media-sm) {
+    #restaurant {
+        flex-direction: column;
+    }
+
+    #restaurant figure {
+        margin: $interval-y-lg;
     }
 }
