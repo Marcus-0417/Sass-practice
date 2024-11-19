@@ -1,0 +1,71 @@
+@import "reset";
+@import "variables";
+
+/* 導覽列 */
+a {
+    display: block;
+    color: $color-deep;
+    text-decoration: none;
+    font-size: map-get($font-size , s);
+    line-height: map-get($font-size , s) * 1.5;
+
+
+    .#{$navbar-prefix}-icon & {
+        margin-right: $interval-m;
+        width: 35px;
+        height: 35px;
+        transition: $speed-fast;
+    }
+
+    .#{$navbar-prefix}-menu & {
+        margin: 10px;
+        padding: 7px 0 5px;
+        border-bottom: solid 2px transparent;
+        transition: $speed-fast;
+        text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+
+        &:hover {
+            border-bottom: solid 2px $color-grey;
+            color: $color-black;
+        }
+    }
+}
+
+nav {
+    display: flex; //主軸方向：水平
+    flex-direction: column; //主軸方向：垂直
+    align-items: flex-end; //副軸水平靠右
+
+    ul {
+        list-style: none;
+        display: flex;
+
+    }
+}
+
+.box {
+    background: {
+        size: 100%;
+        color: $color-black;
+        repeat: no-repeat;
+    }
+
+    font: {
+        size: map-get($font-size , m);
+        weight: bold;
+        family: "sans-serif";
+    }
+
+    line-height: map-get($font-size , m) * 1.5;
+}
+
+/* 手機版 */
+@media ($media-sm) {
+    #restaurant {
+        flex-direction: column;
+    }
+
+    #restaurant figure {
+        margin: $interval-y-lg;
+    }
+}
