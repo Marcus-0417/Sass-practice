@@ -1,0 +1,10 @@
+@mixin single-ellipsis {
+    /* 單行省略 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+}
+@mixin bordered ($width:1px, $color:#666) {
+    border: $width solid $color;
+}

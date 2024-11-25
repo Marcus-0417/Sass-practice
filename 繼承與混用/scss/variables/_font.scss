@@ -1,0 +1,21 @@
+// 字體
+$font-tc: "微軟正黑體",sans-serif;
+$font-en: roboto ,sans-serif;
+
+// 字級
+$font-size: ( /* map-get($font-size , s ) */
+    xs: 0.8rem,
+    s: 1rem,
+    m: 1.2rem,
+    l: 1.4rem,
+    xl: 1.6rem,
+    xxl: 1.8rem,
+    xxxl: 2rem,
+);
+// $font-size-xs: 0.8rem;
+// $font-size-s: 1rem;
+// $font-size-m: 1.2rem;
+// $font-size-l: 1.4rem;
+// $font-size-xl: 1.6rem;
+// $font-size-xxl: 1.8rem;
+// $font-size-xxxl: 2rem;
